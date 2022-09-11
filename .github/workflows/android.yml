@@ -25,8 +25,8 @@ jobs:
 
     - name: Setup APK signing
       run: |
-        echo -n ${{ secrets.SIGNING_KEY }} | base64 -d > app/storeFile.jsk
-        echo storeFile=storeFile.jsk > custom.properties
+        echo -n ${{ secrets.SIGNING_KEY }} | base64 -d > app/SVolfDev.key
+        echo storeFile=SVolfDev.key > custom.properties
         echo storePassword=${{ secrets.KEY_STORE_PASSWORD }} >> custom.properties
         echo keyAlias=${{ secrets.ALIAS }} >> custom.properties
         echo keyPassword=${{ secrets.KEY_PASSWORD }} >> custom.properties
